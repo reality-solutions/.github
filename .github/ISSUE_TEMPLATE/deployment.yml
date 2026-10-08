@@ -1,7 +1,6 @@
 name: Record Deployment
 description: Record a deployment made to a customer environment
 title: "[ProjectRef/Issue No]/[Title]"
-labels: ["deployment"]
 
 body:
   - type: input
