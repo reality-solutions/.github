@@ -1,0 +1,62 @@
+name: Record Deployment
+description: Record a deployment made to a customer environment
+title: "[Deployment] "
+
+body:
+  - type: input
+    id: customer
+    attributes:
+      label: Customer
+      description: Enter the customer the deployment was carried out for.
+      placeholder: Customer name
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / Release
+      description: Enter the version, release number or build deployed.
+      placeholder: e.g. v2.4.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Select the environment the deployment was made to.
+      options:
+        - Production
+        - UAT
+        - Test
+        - Development
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Deployment Date
+      description: Enter the date the deployment was carried out.
+      placeholder: DD/MM/YYYY
+    validations:
+      required: true
+
+  - type: textarea
+    id: changes
+    attributes:
+      label: Changes Deployed
+      description: Briefly describe what was included in the deployment.
+      placeholder: |
+        - Updated courier export service
+        - Fixed DPD shipping integration
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / Issues
+      description: Record any problems, rollback information or additional notes.
+      placeholder: No issues encountered
