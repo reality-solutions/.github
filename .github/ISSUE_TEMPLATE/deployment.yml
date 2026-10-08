@@ -1,7 +1,18 @@
 name: Record Deployment
 description: Record a deployment made to a customer environment
-title: "[Deployment] "
-
+title: "[ProjectRef/Issue No]/{Title}"
+  - type: dropdown
+    id: deployment_category
+    attributes:
+      label: Deployment Category
+      description: Select the category that best describes this deployment.
+      options:
+        - Feature
+        - Bug fix
+        - Maintenance
+        - Rollback
+    validations:
+      required: true
 body:
   - type: input
     id: customer
