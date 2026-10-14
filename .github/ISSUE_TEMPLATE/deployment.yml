@@ -39,7 +39,7 @@ body:
     attributes:
       label: Deployment Date
       description: Enter the date the deployment was carried out.
-      placeholder: DD/MM/YYYY
+      placeholder: DD/MM/YYYY HH:MM
     validations:
       required: true
 
